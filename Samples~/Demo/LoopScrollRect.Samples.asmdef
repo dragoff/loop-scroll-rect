@@ -1,12 +1,10 @@
 {
-    "name": "LoopScrollRect.Editor",
+    "name": "LoopScrollRect.Samples",
     "rootNamespace": "",
     "references": [
-        "GUID:387e796ff25bc3644976ea1c22d6a605"
+        "GUID:3d8584c567447bb43898d28470c58787"
     ],
-    "includePlatforms": [
-        "Editor"
-    ],
+    "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
     "overrideReferences": false,

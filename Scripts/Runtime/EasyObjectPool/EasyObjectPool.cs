@@ -9,7 +9,7 @@ using Object = UnityEngine.Object;
 
 namespace SG
 {
-    interface IPoolObject<in T>
+    public interface IPoolObject<in T>
     {
         void SetScrollData(int index, T data);
     }
