@@ -2,7 +2,7 @@
   "name": "com.dragoff.loopscrollrect",
   "version": "1.0.5-2",
   "displayName": "Loop Scroll Rect",
-  "author": "Evgeniy A @dragoff <abramov_eugine@mail.ru>",
+  "author": "@dragoff (Evgeniy A) feat @qiankanglai (Kanglai Qian)",
   "unity": "2019.1",
   "description": "Loop Scroll Rect with data providing.\noriginal: https://github.com/qiankanglai/LoopScrollRect",
   "files": [	
