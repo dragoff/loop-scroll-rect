@@ -1,0 +1,16 @@
+{
+    "name": "LoopScrollRect.Samples",
+    "rootNamespace": "",
+    "references": [
+        "LoopScrollRect"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
