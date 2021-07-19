@@ -6,16 +6,16 @@
   "unity": "2019.1",
   "description": "Loop Scroll Rect with data providing.\noriginal: https://github.com/qiankanglai/LoopScrollRect",
   "files": [	
-	"Packages/Scripts",
-	"Packages/Scripts.meta",
-	"Packages/Samples~",
+	"Scripts",
+	"Scripts.meta",
+	"Samples~",
 	"package.json.meta"
   ],
   "samples": [
         {
             "displayName": "Demo",
             "description": "This sample demonstrates how Loop Scroll Rect handle",
-            "path": "Packages/Samples~/Demo"
+            "path": "Samples~/Demo"
         }
     ]
 }
