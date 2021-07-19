@@ -1,6 +1,6 @@
 ﻿/* (c) Preet Kamal Singh Minhas, http://marchingbytes.com
  * contact@marchingbytes.com */
- 
+
 
 using System;
 using System.Collections.Generic;
@@ -9,11 +9,6 @@ using Object = UnityEngine.Object;
 
 namespace SG
 {
-    public interface IPoolObject<in T>
-    {
-        void SetScrollData(int index, T data);
-    }
-
     [DisallowMultipleComponent]
     [AddComponentMenu("")]
     public class PoolObject : MonoBehaviour
@@ -179,7 +174,8 @@ namespace SG
             }
             else
             {
-                Debug.LogError(string.Format("[Loop Scroll Rect] Trying to add object to incorrect pool {0} {1}", po.Name, poolName));
+                Debug.LogError(string.Format("[Loop Scroll Rect] Trying to add object to incorrect pool {0} {1}",
+                    po.Name, poolName));
             }
         }
     }

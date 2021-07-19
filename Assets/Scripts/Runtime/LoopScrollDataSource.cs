@@ -23,17 +23,18 @@ namespace UnityEngine.UI
     public class LoopScrollSendData<T> : LoopScrollDataSource
     {
         readonly T[] listObjectsToFill;
-
-        public LoopScrollSendData(T[] listObjectsToFill)
+        private readonly object[] other;
+        public LoopScrollSendData(T[] listObjectsToFill, params object[] other)
         {
             this.listObjectsToFill = listObjectsToFill;
+            this.other = other;
         }
 
         public override void ProvideData(PoolObject poolObject, int idx)
         {
-            var comp = poolObject.GetComponent<IPoolObject<T>>();
+            var comp = poolObject.GetComponent<ILoopScrollElement<T>>();
             if (comp != null)
-                comp.SetScrollData(idx, listObjectsToFill[idx]);
+                comp.SetScrollData(idx, listObjectsToFill[idx], other);
             else
                 poolObject.transform.SendMessage("SetScrollData", listObjectsToFill[idx]);
         }

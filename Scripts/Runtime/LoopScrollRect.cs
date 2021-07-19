@@ -27,10 +27,10 @@ namespace UnityEngine.UI
         [NonSerialized]
         public LoopScrollDataSource dataSource = LoopScrollSendIndexSource.Instance;
 
-        private void SetListObjects<T>(T[] value)
+        private void SetListObjects<T>(T[] value, params object[] other)
         {
             if (value != null)
-                dataSource = new LoopScrollSendData<T>(value);
+                dataSource = new LoopScrollSendData<T>(value, other);
             else
                 dataSource = LoopScrollSendIndexSource.Instance;
         }
@@ -441,26 +441,26 @@ namespace UnityEngine.UI
             RefillCells();
         }
 
-        public void Init<T>(T[] listObjectsToFill)
+        public void Init<T>(T[] listObjectsToFill, params object[] other)
         {
             TotalCount = listObjectsToFill.Length;
-            SetListObjects(listObjectsToFill);
+            SetListObjects(listObjectsToFill, other);
             RefillCells();
         }
 
-        public void Init<T>(int count, GameObject prefab = null, T[] listObjectsToFill = null)
+        public void Init<T>(int count, GameObject prefab = null, T[] listObjectsToFill = null, params object[] other)
         {
             TotalCount = count;
-            SetListObjects(listObjectsToFill);
+            SetListObjects(listObjectsToFill, other);
             if (prefab != null)
                 PrefabSource.Prefab = prefab;
             RefillCells();
         }
 
-        public void Init<T>(int count, string prefab = null, T[] listObjectsToFill = null)
+        public void Init<T>(int count, string prefab = null, T[] listObjectsToFill = null, params object[] other)
         {
             TotalCount = count;
-            SetListObjects(listObjectsToFill);
+            SetListObjects(listObjectsToFill, other);
             if (!string.IsNullOrEmpty(prefab))
                 PrefabSource.PrefabNameFromResources = prefab;
             RefillCells();
